@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 
-class App extends Component {
+class demo3 extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
     }
     render() { 
         return ( 
-            <div>
-            {this.props.children}
-            </div>
+            <div>demo3</div>
          );
     }
 }
  
-export default App;
+export default demo3;

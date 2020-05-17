@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 
-class App extends Component {
+class noMatch extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
     }
     render() { 
         return ( 
-            <div>
-            {this.props.children}
-            </div>
+            <div>404 Not Find!!!</div>
          );
     }
 }
  
-export default App;
+export default noMatch;
