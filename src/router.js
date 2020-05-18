@@ -18,6 +18,8 @@ import City from './page/city'
 import BasicForm from './page/table/basicTable'
 import HeighForm from './page/table/hightTable'
 import Order from './page/order'
+import BikeMap from './page/map'
+import Prom from './page/promise'
 
 
 
@@ -48,6 +50,8 @@ class router extends Component {
                                 <Route path='/admin/table/high' component={HeighForm} />
                                 <Route path='/admin/city' component={City} />
                                 <Route path='/admin/order' component={Order} />
+                                <Route path='/admin/bikeMap' component={BikeMap} />
+                                <Route path='/admin/permission' component={Prom} />
                                 <Route component={NoMatch} />
                             </Switch>
                         </Admin>

@@ -4,10 +4,15 @@ import { Row, Col } from 'antd'
 import 'antd/dist/antd.css'
 import './index.css'
 import Untils from "../../untils/untils";
+import store from '../../store'
 class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {}
+        store.subscribe(this.storeChange)
+    }
+    storeChange=()=>{
+        this.setState(store.getState())
     }
     componentWillMount() {
         this.setState({
@@ -19,6 +24,7 @@ class Header extends Component {
                systime
            })
         },1000)
+        this.setState(store.getState())
     }
     render() {
         return (
@@ -34,7 +40,7 @@ class Header extends Component {
                 <div className="breadcrumb">
                     <Row>
                         <Col span='4' className='breadcrumb-title'>
-                            首页
+                            {this.state.title}
                         </Col>
                         <Col span='20' className='weather'>
                             <span className='date'>{this.state.systime}</span>
